@@ -30,23 +30,25 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->no_pasien }}</td>
+                                        <td>{{ $item->nama }}</td>
+                                        <td>{{ $item->jenis_kelamin }}</td>
+                                        <td>{{ $item->umur }}</td>
                                         <td>
-                                            {{ $item->nama }}
+                                            <img src="/storage/images/{{ $item->foto ? $item->foto : '0.jpg' }}" alt="foto" height="50px" width="50px">
                                         </td>
+                                        <td>{{ $item->alamat }}</td>
                                         <td>
-                                            {{ $item->jenis_kelamin }}
-                                        </td>
-                                        <td>
-                                            {{ $item->umur }}
-                                        </td>
-                                        <td>
-                                            {{ $item->foto }}
-                                        </td>
-                                        <td>
-                                            {{ $item->alamat }}
-                                        </td>
-                                        <td>
-                                            {{ 'Edit | Hapus' }}
+                                            <a href="/pasien/{{ $item->id }}/edit" class="btn btn-warning btn-sm ml-2">
+                                                Edit
+                                            </a>
+                                            <form action="/pasien/{{ $item->id }}" method="post" class="d-inline">
+                                                @csrf
+                                                @method('delete')
+                                                <button class="btn btn-danger btn-sm ml-2"
+                                                    onclick="return confirm('Yakin ingin menghapus data?')">
+                                                    Hapus
+                                                </button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach
