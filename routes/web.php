@@ -15,4 +15,6 @@ Auth::routes();
 
 Route::resource('pasien', App\Http\Controllers\PasienController::class);
 
-
+Route::middleware(['auth'])->group(function () {
+    Route::resource('pasien', App\Http\Controllers\PasienController::class);
+});
