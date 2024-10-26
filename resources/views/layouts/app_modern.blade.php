@@ -40,6 +40,10 @@
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
+                        <li class="nav-small-cap">
+                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                            <span class="hide-menu">Data Pasien</span>
+                        </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="/pasien/create" aria-expanded="false">
                                 <span>
@@ -56,6 +60,10 @@
                                 <span class="hide-menu">Pasien</span>
                             </a>
                         </li>
+                        <li class="nav-small-cap">
+                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                            <span class="hide-menu">Poli</span>
+                        </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="/poli" aria-expanded="false">
                                 <span>
@@ -63,6 +71,10 @@
                                 </span>
                                 <span class="hide-menu">Poli</span>
                             </a>
+                        </li>
+                        <li class="nav-small-cap">
+                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                            <span class="hide-menu">Data Pengguna</span>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="/users" aria-expanded="false">
