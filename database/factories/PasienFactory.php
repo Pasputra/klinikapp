@@ -22,7 +22,6 @@ class PasienFactory extends Factory
             'umur' => $this->faker->numberBetween(20, 50),
             'jenis_kelamin' => $this->faker->randomElement(['laki-laki', 'perempuan']),
             'alamat' => $this->faker->address(),
-            'aksi' =>$this->faker-
         ];
     }
 }

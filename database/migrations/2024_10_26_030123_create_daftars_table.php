@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pasiens', function (Blueprint $table) {
+        Schema::create('daftars', function (Blueprint $table) {
             $table->id();
-            $table->string('no_pasien');
-            $table->string('nama');
-            $table->string('umur');
-            $table->string('foto')->nullable();
-            $table->string('jenis_kelamin');
-            $table->string('alamat')->nullable();
+            $table->foreignId('pasien_id');
+            $table->foreignId('poli_id');
+            $table->date('tanggal_daftar');
+            $table->string('keluhan');
+            $table->string('diagnosis')->nullable();
+            $table->string('tindakan')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pasiens');
+        Schema::dropIfExists('daftars');
     }
 };
